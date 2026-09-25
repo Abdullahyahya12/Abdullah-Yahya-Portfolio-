@@ -1,0 +1,116 @@
+export const projects = [
+  {
+    id: 1,
+    title: "SaaSFlow",
+    subtitle: "Modern SaaS Landing Page",
+    description:
+      "A modern responsive SaaS landing page built with React, Vite and Tailwind CSS. The project includes reusable components, pricing plans, testimonials, FAQ accordion, animations, dark/light mode and responsive navigation.",
+    image: "/projects/saasflow.png",
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+    ],
+    features: [
+      "Responsive design",
+      "Dark/Light mode",
+      "Interactive pricing toggle",
+      "FAQ accordion",
+      "Animated statistics",
+      "Responsive navigation",
+      "Reusable React components",
+      "Modern animations",
+      "Back-to-top button",
+    ],
+    github: "https://github.com/Abdullahyahya12/Saas-Landing-Page-React",
+    liveDemo: "https://saas-landing-page-react-steel.vercel.app/",
+  
+  },
+
+  {
+    id: 2,
+    title: "Task Management System",
+    subtitle: "Full Stack Task Management App",
+    description:
+      "A production-style task management application designed to manage tasks through a clean and responsive user interface. The project focuses on CRUD functionality, reusable components and an organized application structure.",
+    image: "/projects/task-management.png",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+    ],
+    features: [
+      "Task creation",
+      "Task editing",
+      "Task deletion",
+      "Task management",
+      "Responsive interface",
+      "Reusable components",
+      "Clean UI structure",
+      "CRUD functionality",
+    ],
+    github: "#",
+    liveDemo: "#",
+  },
+
+  {
+    id: 3,
+    title: "React Menu Page",
+    subtitle: "Modern Restaurant Menu UI",
+    description:
+      "A responsive restaurant menu interface built with React. The project focuses on reusable components, clean layouts, responsive navigation and an interactive user experience.",
+    image: "/projects/react-menu.png",
+    technologies: [
+      "React",
+      "JavaScript",
+      "CSS3",
+      "HTML5",
+      "Vite",
+    ],
+    features: [
+      "Responsive design",
+      "Reusable components",
+      "Modern navigation",
+      "Menu sections",
+      "Interactive UI",
+      "Clean layout",
+      "Mobile-friendly design",
+    ],
+    github: "#",
+    liveDemo: "#",
+  },
+
+  {
+    id: 4,
+    title: "Developer Portfolio",
+    subtitle: "Personal Full Stack Developer Portfolio",
+    description:
+      "A modern and responsive developer portfolio designed to showcase projects, technical skills, development experience and services with a professional user interface.",
+    image: "/projects/portfolio.png",
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+    ],
+    features: [
+      "Responsive design",
+      "Dark/Light mode",
+      "Reusable components",
+      "Project showcase",
+      "Skills section",
+      "Services section",
+      "Contact form",
+      "Responsive navigation",
+    ],
+    github: "#",
+    liveDemo: "#",
+  },
+];

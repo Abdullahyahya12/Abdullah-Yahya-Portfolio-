@@ -1,0 +1,902 @@
+
+@import "tailwindcss";
+
+/* =========================================
+   Base / Theme
+========================================= */
+
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #020617;
+  color: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #020617;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #020617;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+/* =========================================
+   Links / Buttons / Forms
+========================================= */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+/* =========================================
+   Light Theme
+========================================= */
+
+html:not(.dark) {
+  color-scheme: light;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+html:not(.dark) body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* =========================================
+   Smooth Theme Transitions
+========================================= */
+
+body,
+header,
+section,
+footer,
+article,
+button,
+a,
+input,
+textarea {
+  transition-property:
+    background-color,
+    border-color,
+    color,
+    box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+
+/* =========================================
+   Accessibility Focus
+========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Scrollbar
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* =========================================
+   Images
+========================================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   Hero Animations
+========================================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroVisualReveal {
+  from {
+    opacity: 0;
+    transform: translateX(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes heroNameReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-fade-up {
+  opacity: 0;
+  animation: heroFadeUp 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-visual-reveal {
+  opacity: 0;
+  animation:
+    heroVisualReveal
+    1000ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.hero-name-animation {
+  display: inline-block;
+  animation:
+    heroNameReveal
+    900ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    250ms
+    both;
+}
+
+/* =========================================
+   Experience Animations
+========================================= */
+
+@keyframes experienceReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes experienceItemReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes experienceLineReveal {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes experienceDotReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes experienceDotPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px rgba(99, 102, 241, 0.08);
+  }
+}
+
+.experience-reveal {
+  opacity: 0;
+  animation:
+    experienceReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.experience-line {
+  transform: scaleY(0);
+  animation:
+    experienceLineReveal
+    1200ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    300ms
+    both;
+}
+
+.experience-item {
+  opacity: 0;
+  animation:
+    experienceItemReveal
+    850ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.experience-dot {
+  opacity: 0;
+  animation:
+    experienceDotReveal
+      600ms
+      cubic-bezier(0.22, 1, 0.36, 1)
+      both,
+    experienceDotPulse 3s ease-in-out 1.2s infinite;
+}
+
+.experience-card,
+.experience-tech {
+  will-change: transform;
+}
+
+.experience-note {
+  opacity: 0;
+  animation:
+    experienceReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    650ms
+    both;
+}
+
+/* =========================================
+   Services Animations
+========================================= */
+
+@keyframes servicesHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes serviceCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes servicesCtaReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-header {
+  opacity: 0;
+  animation:
+    servicesHeaderReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.services-count {
+  opacity: 0;
+  animation:
+    servicesHeaderReveal
+    700ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    180ms
+    both;
+}
+
+.service-card {
+  opacity: 0;
+  animation:
+    serviceCardReveal
+    750ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+  will-change: transform;
+}
+
+.service-icon {
+  will-change: transform;
+}
+
+.services-cta {
+  opacity: 0;
+  animation:
+    servicesCtaReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    650ms
+    both;
+}
+
+/* =========================================
+   Developer Stats Animations
+========================================= */
+
+@keyframes developerStatsHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes developerFocusCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes developerStatsNoteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.developer-stats-header {
+  opacity: 0;
+  animation:
+    developerStatsHeaderReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.developer-focus-card {
+  opacity: 0;
+  animation:
+    developerFocusCardReveal
+    750ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+  will-change: transform;
+}
+
+.developer-focus-icon,
+.developer-focus-tag {
+  will-change: transform;
+}
+
+.developer-stats-note {
+  opacity: 0;
+  animation:
+    developerStatsNoteReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    600ms
+    both;
+}
+
+/* =========================================
+   Contact Animations
+========================================= */
+
+@keyframes contactHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactFormReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes contactSuccessReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-header {
+  opacity: 0;
+  animation:
+    contactHeaderReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.contact-info-card {
+  opacity: 0;
+  animation:
+    contactCardReveal
+    750ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.contact-info-card:nth-child(1) {
+  animation-delay: 150ms;
+}
+
+.contact-info-card:nth-child(2) {
+  animation-delay: 250ms;
+}
+
+.contact-info-card:nth-child(3) {
+  animation-delay: 350ms;
+}
+
+.contact-info-card:nth-child(4) {
+  animation-delay: 450ms;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.contact-icon {
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+.contact-info-card:hover .contact-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.contact-form-card {
+  opacity: 0;
+  animation:
+    contactFormReveal
+    850ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    250ms
+    both;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  transition:
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  transform: translateY(-1px);
+}
+
+.contact-submit {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-submit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-110%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+
+  transition: transform 500ms ease;
+}
+
+.contact-submit:hover::before {
+  transform: translateX(110%);
+}
+
+.contact-success {
+  animation: contactSuccessReveal 350ms ease-out both;
+}
+
+.contact-note {
+  opacity: 0;
+  animation:
+    contactHeaderReveal
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    650ms
+    both;
+
+  transition:
+    border-color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
+}
+
+.contact-note:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   Global Scroll Reveal System
+========================================= */
+
+/*
+  IMPORTANT:
+  Elements remain visible by default.
+  This prevents light-mode sections from
+  becoming permanently hidden if the observer
+  initializes after the first render.
+*/
+
+.scroll-reveal,
+.scroll-reveal-left,
+.scroll-reveal-right,
+.scroll-reveal-scale {
+  opacity: 1;
+  will-change: opacity, transform;
+}
+
+/* Starting positions */
+
+.scroll-reveal {
+  transform: translateY(0);
+}
+
+.scroll-reveal-left {
+  transform: translateX(0);
+}
+
+.scroll-reveal-right {
+  transform: translateX(0);
+}
+
+.scroll-reveal-scale {
+  transform: scale(1);
+}
+
+/* =========================================
+   Reveal Animations
+========================================= */
+
+@keyframes scrollRevealUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollRevealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollRevealRight {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollRevealScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-reveal.is-visible {
+  animation:
+    scrollRevealUp
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.scroll-reveal-left.is-visible {
+  animation:
+    scrollRevealLeft
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.scroll-reveal-right.is-visible {
+  animation:
+    scrollRevealRight
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.scroll-reveal-scale.is-visible {
+  animation:
+    scrollRevealScale
+    800ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+/* =========================================
+   Scroll Reveal Stagger
+========================================= */
+
+.scroll-delay-100 {
+  animation-delay: 100ms !important;
+}
+
+.scroll-delay-200 {
+  animation-delay: 200ms !important;
+}
+
+.scroll-delay-300 {
+  animation-delay: 300ms !important;
+}
+
+.scroll-delay-400 {
+  animation-delay: 400ms !important;
+}
+
+.scroll-delay-500 {
+  animation-delay: 500ms !important;
+}
+
+/* =========================================
+   Hero Technology Badge Float
+========================================= */
+
+@keyframes heroTechFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.hero-tech-float {
+  animation: heroTechFloat 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* =========================================
+   Reduced Motion
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .experience-reveal,
+  .experience-line,
+  .experience-item,
+  .experience-dot,
+  .experience-note,
+  .services-header,
+  .services-count,
+  .service-card,
+  .services-cta,
+  .developer-stats-header,
+  .developer-focus-card,
+  .developer-stats-note,
+  .contact-header,
+  .contact-info-card,
+  .contact-form-card,
+  .contact-success,
+  .contact-note,
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .contact-info-card:hover,
+  .contact-note:hover {
+    transform: none;
+  }
+
+  .hero-tech-float {
+    animation: none;
+  }
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+}
+
