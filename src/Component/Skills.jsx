@@ -1,7 +1,6 @@
 
 import { skillCategories } from "../data/Skills.js";
-import useScrollReveal from "../Hooks/useScrollReveal.js";
-
+import useScrollReveal from "../Hooks/useScrollReveal";
 function SkillCard({ category, index, darkMode }) {
   const cardRef = useScrollReveal({
     threshold: 0.12,

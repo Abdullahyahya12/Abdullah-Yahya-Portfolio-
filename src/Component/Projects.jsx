@@ -1,5 +1,5 @@
 
-import useScrollReveal from "../Hooks/useScrollReveal.js";
+import useScrollReveal from "../Hooks/useScrollReveal";
 
 const projects = [
   {
