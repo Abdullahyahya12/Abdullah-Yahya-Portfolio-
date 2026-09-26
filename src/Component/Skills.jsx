@@ -1,5 +1,5 @@
 
-import { skillCategories } from "../data/skills";
+import { skillCategories } from "../data/Skills.js";
 import useScrollReveal from "../hooks/useScrollReveal";
 
 function SkillCard({ category, index, darkMode }) {
