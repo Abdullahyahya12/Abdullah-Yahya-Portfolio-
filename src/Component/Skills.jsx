@@ -1,6 +1,6 @@
 
 import { skillCategories } from "../data/Skills.js";
-import useScrollReveal from "../hooks/useScrollReveal";
+import useScrollReveal from "../Hooks/useScrollReveal.js";
 
 function SkillCard({ category, index, darkMode }) {
   const cardRef = useScrollReveal({
