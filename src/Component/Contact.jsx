@@ -89,7 +89,6 @@ function Contact({ darkMode }) {
         </svg>
       ),
     },
-
     {
       id: 2,
       label: "LinkedIn",
@@ -108,7 +107,6 @@ function Contact({ darkMode }) {
         </svg>
       ),
     },
-
     {
       id: 3,
       label: "Email",
@@ -138,7 +136,6 @@ function Contact({ darkMode }) {
         </svg>
       ),
     },
-
     {
       id: 4,
       label: "Phone",
@@ -163,7 +160,6 @@ function Contact({ darkMode }) {
         </svg>
       ),
     },
-
     {
       id: 5,
       label: "Location",
@@ -185,11 +181,7 @@ function Contact({ darkMode }) {
             strokeLinejoin="round"
             d="M12 21s7-6.15 7-12a7 7 0 1 0-14 0c0 5.85 7 12 7 12Z"
           />
-          <circle
-            cx="12"
-            cy="9"
-            r="2.5"
-          />
+          <circle cx="12" cy="9" r="2.5" />
         </svg>
       ),
     },
@@ -346,11 +338,7 @@ function Contact({ darkMode }) {
                       strokeLinejoin="round"
                       d="M9 12.75 11.25 15 15 9.75"
                     />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="9"
-                    />
+                    <circle cx="12" cy="12" r="9" />
                   </svg>
                 </div>
 
@@ -438,9 +426,7 @@ function Contact({ darkMode }) {
                 />
 
                 {errors.name && (
-                  <p className="mt-2 text-xs text-red-500">
-                    {errors.name}
-                  </p>
+                  <p className="mt-2 text-xs text-red-500">{errors.name}</p>
                 )}
               </div>
 
@@ -475,9 +461,7 @@ function Contact({ darkMode }) {
                 />
 
                 {errors.email && (
-                  <p className="mt-2 text-xs text-red-500">
-                    {errors.email}
-                  </p>
+                  <p className="mt-2 text-xs text-red-500">{errors.email}</p>
                 )}
               </div>
 
@@ -583,3 +567,4 @@ function Contact({ darkMode }) {
 }
 
 export default Contact;
+

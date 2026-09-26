@@ -5,7 +5,7 @@ export const projects = [
     subtitle: "Modern SaaS Landing Page",
     description:
       "A modern responsive SaaS landing page built with React, Vite and Tailwind CSS. The project includes reusable components, pricing plans, testimonials, FAQ accordion, animations, dark/light mode and responsive navigation.",
-    image: "/projects/saasflow.png",
+    image: "/Projects/saasflow.png",
     technologies: [
       "React",
       "Vite",
