@@ -366,7 +366,7 @@ function Contact({ darkMode }) {
 
           {/* Contact Form */}
           <div
-            className={`contact-form-card rounded-[2rem] border p-6 sm:p-8 ${
+            className={`contact-form-card rounded- [2rem] border p-6 sm:p-8 ${
               darkMode
                 ? "border-slate-800 bg-slate-900/70 shadow-2xl shadow-black/20"
                 : "border-slate-200 bg-white shadow-xl shadow-slate-200/50"

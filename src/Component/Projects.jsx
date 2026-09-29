@@ -26,15 +26,15 @@ const projects = [
     subtitle: "Full Stack Task Management App",
     description:
       "A task management project focused on structured application development, task organization, responsive UI and reusable components.",
-    image: null,
+    image: "/Projects/tmg.png",
     technologies: [
       "React",
       "JavaScript",
       "Responsive Design",
       "CRUD",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Abdullahyahya12/Task-Management-System",
+    live: "https://abdullah-yahya-portfolio-y5v2.vercel.app/",
   },
   {
     id: 3,
@@ -68,6 +68,7 @@ const projects = [
     github: "#",
     live: "#",
   },
+  
 ];
 
 function ProjectCard({ project, index, darkMode }) {
