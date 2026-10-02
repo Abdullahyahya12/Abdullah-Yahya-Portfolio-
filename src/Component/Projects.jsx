@@ -1,4 +1,3 @@
-
 import useScrollReveal from "../Hooks/useScrollReveal";
 
 const projects = [
@@ -20,38 +19,48 @@ const projects = [
       "https://github.com/Abdullahyahya12/Saas-Landing-Page-React",
     live: "https://saas-landing-page-react-steel.vercel.app/",
   },
+
   {
     id: 2,
     title: "Task Management System",
-    subtitle: "Full Stack Task Management App",
+    subtitle: "Advanced Task Management App",
     description:
-      "A task management project focused on structured application development, task organization, responsive UI and reusable components.",
+      "A responsive task management application focused on task organization, CRUD operations, filtering, search, Kanban views, productivity insights and reusable React components.",
     image: "/Projects/tmg.png",
     technologies: [
       "React",
       "JavaScript",
-      "Responsive Design",
+      "Local Storage",
       "CRUD",
+      "Responsive Design",
     ],
-    github: "https://github.com/Abdullahyahya12/Task-Management-System",
+    github:
+      "https://github.com/Abdullahyahya12/Task-Management-System",
     live: "https://abdullah-yahya-portfolio-y5v2.vercel.app/",
   },
+
   {
     id: 3,
-    title: "React Menu Page",
-    subtitle: "Modern Restaurant Menu UI",
+    title: "TasteBite Restaurant",
+    subtitle: "Full Stack Restaurant Platform",
     description:
-      "A responsive restaurant menu interface built with React, focusing on reusable components, clean layouts and an easy-to-use browsing experience.",
-    image: null,
+      "A production-ready full stack restaurant platform with menu browsing, authentication, cart and checkout, order history, admin order management, password reset and REST API integration.",
+    image: "/Projects/tastebite.png",
     technologies: [
       "React",
-      "JavaScript",
-      "CSS3",
-      "Responsive Design",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "REST API",
     ],
-    github: "#",
-    live: "#",
+    github:
+      "https://github.com/Abdullahyahya12/TasteBite-Restaurant",
+    live: "https://taste-bite-restaurant.vercel.app/",
   },
+
   {
     id: 4,
     title: "Developer Portfolio",
@@ -68,7 +77,6 @@ const projects = [
     github: "#",
     live: "#",
   },
-  
 ];
 
 function ProjectCard({ project, index, darkMode }) {
@@ -97,6 +105,7 @@ function ProjectCard({ project, index, darkMode }) {
             alt={`${project.title} project preview`}
             className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
             loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
           />
         ) : (
           <div
@@ -325,8 +334,8 @@ function Projects({ darkMode }) {
             }`}
           >
             A selection of projects demonstrating my approach to modern
-            frontend development, responsive interfaces and reusable React
-            components.
+            frontend and full stack development, responsive interfaces and
+            reusable React components.
           </p>
         </div>
 
