@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdullah-yahya-portfolio-y5v2.vercel.app/sitemap.xml
